@@ -34,9 +34,15 @@ The actions that I used , are inside a list of tuples(named PossibleActions) whe
 that means that we have 2 actions : the first action will move block 1 on top of block 2 and the second action will move block 3 on the table. Each action(tuple) inside the PossibleActions list, is checked by an IsValid function that returns true if the action is valid or else false(e.g : you cannot move a block that has other blocks stacked on top of it). After that, we have
 a list of all the valid actions(list of tuples) and we are ready to move on and apply those actions to a state.
 
+-------------------
+Heuristic Functions
+-------------------
+I used two heuristic functions :
 
+H1 : checks how many blocks have different positions comparing the state that we are in the node and the Goal State(nasically how many blocks are NOT where they should be in the current node-state). H1 is admissible because it never overestimates the cost of reaching the goal and is also consistent because for every node N and each successor P of N, the estimated cost of reaching the goal from N is no greater than the step cost of getting to P plus the estimated cost of reaching the goal from P.
 
+H2: Manhattan distance
 
-
+Of those two, heuristic function H1 seemed to be giving better results and by that I mean less explored nodes, therefore, less execution time
 
 
