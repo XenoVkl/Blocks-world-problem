@@ -39,7 +39,7 @@ Heuristic Functions
 -------------------
 I used two heuristic functions :
 
-H1 : checks how many blocks have different positions comparing the state that we are in the node and the Goal State(nasically how many blocks are NOT where they should be in the current node-state). H1 is admissible because it never overestimates the cost of reaching the goal and is also consistent because for every node N and each successor P of N, the estimated cost of reaching the goal from N is no greater than the step cost of getting to P plus the estimated cost of reaching the goal from P.
+H1 : checks how many blocks have different positions comparing the state that we are in the node and the Goal State(basically how many blocks are NOT where they should be in the current node-state). H1 is admissible because it never overestimates the cost of reaching the goal and is also consistent because for every node N and each successor P of N, the estimated cost of reaching the goal from N is no greater than the step cost of getting to P plus the estimated cost of reaching the goal from P.
 
 H2: Manhattan distance
 
